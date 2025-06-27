@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homemade Bliss</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <img src="images/image3.avif" alt="Homemade Bliss Logo" class="logo" />
+    <h1>Homemade Bliss</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#booking">Book a Table</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Welcome to Homemade Bliss</h2>
+    <p>Healthy, homemade food crafted with care and fresh ingredients</p>
+    <button onclick="document.getElementById('booking').scrollIntoView({ behavior: 'smooth' })">Book a Table</button>
+  </section>
+
+  <section id="menu">
+  <h2>Our Menu</h2>
+  
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button class="active" data-category="all">All</button>
+    <button data-category="salad">Salad</button>
+    <button data-category="main">Main</button>
+    <button data-category="drinks">Drinks</button>
+    <button data-category="dessert">Dessert</button>
+  </div>
+
+  <div class="menu-items">
+    <!-- Salads -->
+    <div class="item" data-category="salad">
+      <img src="images/beetroot.jpeg" alt="Beetroot Salad" />
+      <h3>Beetroot Salad</h3>
+      <p>Beets, greens, goat cheese, and walnuts with vinaigrette.</p>
+    </div>
+    <div class="item" data-category="salad">
+      <img src="images/kale.jpeg" alt="Kale & Chickpea Salad" />
+      <h3>Kale & Chickpea Salad</h3>
+      <p>Fresh kale with roasted chickpeas and tahini dressing.</p>
+    </div>
+
+    <!-- Main Courses -->
+    <div class="item" data-category="main">
+      <img src="images/veggies.jpeg" alt="Grilled Veggie Bowl" />
+      <h3>Grilled Veggie Bowl</h3>
+      <p>Roasted vegetables with quinoa and olive oil drizzle.</p>
+    </div>
+    <div class="item" data-category="main">
+      <img src="images/lentil.jpeg" alt="Lentil Soup" />
+      <h3>Lentil Soup</h3>
+      <p>Warm, protein-rich lentil soup with herbs and lemon.</p>
+    </div>
+    <div class="item" data-category="main">
+      <img src="images/bell.jpeg" alt="Stuffed Bell Peppers" />
+      <h3>Stuffed Bell Peppers</h3>
+      <p>Quinoa, black beans, corn, and avocado stuffed in bell peppers.</p>
+    </div>
+    <div class="item" data-category="main">
+      <img src="images/avacado.jpeg" alt="Avocado Wrap" />
+      <h3>Avocado Wrap</h3>
+      <p>Whole grain wrap with avocado, spinach, and grilled tofu.</p>
+    </div>
+
+    <!-- Drinks -->
+    <div class="item" data-category="drinks">
+      <img src="images/berry.jpeg" alt="Berry Smoothie Bowl" />
+      <h3>Berry Smoothie Bowl</h3>
+      <p>Mixed berries, granola, chia seeds, and Greek yogurt.</p>
+    </div>
+    <div class="item" data-category="drinks">
+      <img src="images/matcha.jpeg" alt="Matcha Latte" />
+      <h3>Matcha Latte</h3>
+      <p>Creamy matcha green tea with oat milk and honey.</p>
+    </div>
+
+    <!-- Desserts -->
+    <div class="item" data-category="dessert">
+      <img src="images/oatsbar.jpeg" alt="Oatmeal Energy Bars" />
+      <h3>Oatmeal Energy Bars</h3>
+      <p>Homemade granola bars with oats, nuts, and dried fruits.</p>
+    </div>
+    <div class="item" data-category="dessert">
+      <img src="images/chocoavocado.jpeg" alt="Avocado Chocolate Mousse" />
+      <h3>Avocado Chocolate Mousse</h3>
+      <p>Rich chocolate mousse made with ripe avocado and cocoa.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="booking">
+    <h2>Book a Table</h2>
+    <form class="booking-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="date" name="date" required />
+      <select name="time" required>
+        <option value="">Select Time</option>
+        <option value="12:00 PM">12:00 PM</option>
+        <option value="1:00 PM">1:00 PM</option>
+        <option value="2:00 PM">2:00 PM</option>
+        <option value="6:00 PM">6:00 PM</option>
+        <option value="7:00 PM">7:00 PM</option>
+        <option value="8:00 PM">8:00 PM</option>
+      </select>
+      <input type="number" name="people" placeholder="Number of People" min="1" required />
+      <button type="submit">Book Now</button>
+    </form>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Homemade Bliss, we prioritize your health without compromising on taste. Our dishes are packed with nutrients, featuring greens and reds that nourish and satisfy.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Homemade Bliss. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
