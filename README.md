@@ -25,3 +25,7 @@
 - **Google Fonts**
 - **Coolors.co Color Palette**  
   (`#cdb4db`, `#ffc8dd`, `#ffafcc`, `#bde0fe`, `#a2d2ff`)
+  
+🚀 Live Demo
+https://sneha-wq26.github.io/Restaurant_website/
+
